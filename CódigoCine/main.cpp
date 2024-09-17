@@ -1,10 +1,3 @@
-/*
-Sebastián Calvo Carvajal
-Andrés Gerardo González Rosero
-Juan Esteban Arias Saldaña
-Profesora: Leoviviana Moreno Torres
-Grupo 01
-Laboratorio 1*/
 #include "Cine.h"
 #include "Sala.h"
 #include "Película.h"
