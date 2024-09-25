@@ -1,28 +1,27 @@
-#ifndef PRODUCTOS_H 
-#define PRODUCTOS_H
+#ifndef PRODUCTO_H
+#define PRODUCTO_H
 #include <string>
 using namespace std;
 
-class Productos
+class Producto
 {
     private:
         string nombre;
         double precio;
         int stock;
 
+
     public:
-        Productos();
-        ~Productos();
+        Producto();
+        ~Producto();
         void setNombre(string);
         void setPrecio(double);
         void setStock(int);
         string getNombre();
         double getPrecio();
         int getStock();
-
 };
-
-
 #else
-class Productos;
-#endif
+class Ṕroducto;
+
+#endif // PRODUCTO_H

@@ -1,0 +1,3 @@
+G:/Documents/Code/CódigoCine/build/CMakeFiles/CineFPOO.dir
+G:/Documents/Code/CódigoCine/build/CMakeFiles/edit_cache.dir
+G:/Documents/Code/CódigoCine/build/CMakeFiles/rebuild_cache.dir

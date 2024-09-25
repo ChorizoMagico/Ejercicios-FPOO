@@ -1,98 +1,145 @@
-#include "tienda.h"
+#include "Tienda.h"
 #include <iostream>
 
+
+
 Tienda::Tienda(){}
+
 Tienda::~Tienda(){}
 
 string leer(string mensaje)
 {
     string aux;
-    do
-    {
+    do{
         cout<<mensaje;
         getline(cin, aux);
-    } while (aux.empty());
+    }while(aux.empty());
     return aux;
+}
+
+Producto& Tienda::getProducto(int índice)
+{
+    return totalProductos[índice];
 }
 
 void Tienda::ingresarProducto()
 {
-    int índice, stock;
+    string nombre, nombreM="";
     double precio;
-    string nombre;
-    índice=stoi(leer("\nDigite el número del producto a ingresar: "))-1;
+    int stock, índice, marca;
+    bool repetido=false;
+    índice=stoi(leer("\nDigite el número del producto a ingresar: "));
     nombre=leer("\nDigite el nombre del producto: ");
-    if(listaProductos[índice].getNombre()==nombre)
+    precio=stod(leer("\nDigite el precio del producto: "));
+    stock=stoi(leer("\nDigite el stock del producto: "));
+    for(int i=0; i<nombre.length();i++)
     {
-        cout<<"\nProducto ya existente. Solo es posible cambiar el stock."<<endl;
-        stock=stoi(leer("\nDigite el nuevo stock (-1 si no desea cambiarlo): \n"));       
-        if(stock>=0)
-            listaProductos[índice].setStock(stock);
+        nombreM+=tolower(nombre[i]);
+    }
+    for(int i=0; i<10; i++)
+    {
+        if(getProducto(i).getNombre()==nombreM)
+        {
+            repetido=true;
+            marca=i;
+        }
+    }
+    if(repetido==true)
+    {
+        stock=stoi(leer("\nProducto ya existente. Solo puede actualizar su stock: "));
+        getProducto(marca).setStock(stock);
     }
     else
     {
-        precio=stod(leer("\nDigite el precio del producto: "));
-        stock=stoi(leer("\nDigite el stock del producto: "));
-        listaProductos[índice].setNombre(nombre);
-        listaProductos[índice].setPrecio(precio);
-        listaProductos[índice].setStock(stock);
-        cout<<"Producto "<<listaProductos[índice].getNombre()<<" ingresado con éxito!!"<<endl;
-    }
-
-}
-
-void Tienda::mostrarProducto()
-{
-    for(int i=0; i<10; i++)
-    {
-        if(listaProductos[i].getNombre()!="")
-        {
-            cout<<"Producto No. "<<to_string(i+1)<<": "<<listaProductos[i].getNombre()<<"; "
-                <<listaProductos[i].getPrecio()<<"; "<<listaProductos[i].getStock()<<"."<<endl;
-        }
+        getProducto(índice).setNombre(nombreM);
+        getProducto(índice).setPrecio(precio);
+        getProducto(índice).setStock(stock);
+        cout<<"\nProducto creado!!!"<<endl;
     }
 }
-
-void Tienda::buscarporPrecio()
+string Tienda::mostrarProductos()
 {
-    double precio;
     string lista="";
-    precio=stod(leer("\nDigite el precio del producto a buscar: \n"));
     for(int i=0; i<10; i++)
     {
-        if(listaProductos[i].getPrecio()==precio)
+        if(getProducto(i).getNombre()!="")
         {
-            lista+=listaProductos[i].getNombre()+"\n";
+            lista+=getProducto(i).getNombre()+" "+to_string(getProducto(i).getPrecio())+" "+to_string(getProducto(i).getStock())+"\n";
         }
     }
-    if(lista!="")
-    {
-        cout<<"Los siguientes productos tienen el precio de "<<precio<<endl;
-        cout<<lista;
-    }
-    else 
-        cout<<"No hay productos con el precio de "<<precio<<endl;
+    lista+="Productos mostrados con éxito!!!!";
+    return lista;
 }
 
-void Tienda::actualizarPrecio()
+string Tienda::buscarPorNombre()
 {
-    string nombre;
-    bool productoExiste=false;
-    double precio;
-    nombre=leer("\nDigite el nombre del producto: \n");
+    string nombre, nombreM="", lista="";
+    nombre=leer("\nDigite el nombre del producto a buscar: ");
+    for(int i=0; i<nombre.length(); i++)
+    {
+        nombreM+=tolower(nombre[i]);
+    }
+
     for(int i=0; i<10; i++)
     {
-        if(listaProductos[i].getNombre()==nombre)
+        if(getProducto(i).getNombre().find(nombreM)!=string::npos)
         {
-            productoExiste=true;
-            cout<<"\nEl producto vale: "<<listaProductos[i].getPrecio()<<endl;
-            precio=stod(leer("\nDigite el nuevo precio del producto: \n"));
-            listaProductos[i].setPrecio(precio);
-            cout<<"\nPrecio asignado con éxito!!"<<endl;
+            lista+=getProducto(i).getNombre()+" "+to_string(getProducto(i).getPrecio())+" "+to_string(getProducto(i).getStock())+"\n";
         }
     }
-    if(productoExiste=false)
+    lista+="Productos equivalentes mostrados!!\n";
+    return lista;
+}
+string Tienda::calcularStock()
+{
+    int totalStock=0;
+    string lista="";
+    for(int i=0; i<10; i++)
     {
-        cout<<"\nEl producto de nombre "<<nombre<<" no ha sido ingresado aún a la aplicación :("<<endl;
+        totalStock+=getProducto(i).getStock();
+    }
+    lista+="Total de productos en stock: "+to_string(totalStock)+"\n";
+    for(int i=0; i<10; i++)
+    {
+        if(getProducto(i).getNombre()!="")
+            lista+=getProducto(i).getNombre()+" "+to_string(getProducto(i).getStock())+" "+to_string((getProducto(i).getStock()/totalStock)*100)+"%"+"\n";
+    }
+    return lista;
+}
+string Tienda::buscarPorRangoPrecios()
+{
+    double rangoInicio, rangoFinal;
+    rangoInicio=stod(leer("\nDigite el incio del rango de precios: "));
+    rangoFinal=stod(leer("\nDigite el final del rango de precios: "));
+    string lista="\n";
+    for(int i=0; i<10; i++)
+    {
+        if(getProducto(i).getPrecio()<=rangoFinal and getProducto(i).getPrecio()>=rangoInicio)
+        {
+            lista+=getProducto(i).getNombre()+"\n";
+        }
+    }
+    return lista;
+}
+void Tienda::modificarPrecio()
+{
+    string nombre, nombreM="";
+    double precio;
+    nombre=leer("Digite el nombre del producto: ");
+    for(int i=0; i<nombre.length();i++)
+    {
+        nombreM+=tolower(nombre[i]);
+    }
+    for(int i=0; i<10; i++)
+    {
+        if(getProducto(i).getNombre()==nombreM)
+        {
+            cout<<"El precio actual del producto "<<getProducto(i).getNombre()<<" es: "<<getProducto(i).getPrecio()<<endl;
+            precio=stod(leer("Digite el nuevo precio: "));
+            getProducto(i).setPrecio(precio);
+            cout<<"\nPrecio ingresado con éxito!!"<<endl;
+            break;
+        }
+
     }
 }

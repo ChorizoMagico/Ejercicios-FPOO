@@ -1,21 +1,23 @@
 #ifndef TIENDA_H
 #define TIENDA_H
-#include "productos.h"
+#include "Producto.h"
+#include <string>
+
 class Tienda
 {
     private:
-        Productos listaProductos[10];
-    
+        Producto totalProductos[10];
+
     public:
         Tienda();
         ~Tienda();
+        Producto& getProducto(int);
         void ingresarProducto();
-        void mostrarProducto();
-        void buscarporPrecio();
-        void actualizarPrecio();
-        Productos& getProducto(int);
+        string mostrarProductos();
+        string buscarPorNombre();
+        string calcularStock();
+        string buscarPorRangoPrecios();
+        void modificarPrecio();
 };
 
-#else
-class Tienda;
-#endif
+#endif // TIENDA_H
