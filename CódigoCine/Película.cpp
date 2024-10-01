@@ -2,7 +2,10 @@
 
 /*
 Constructor*/
-Película::Película(){}
+Película::Película()
+{
+    nombre="";
+}
 /*Destructor
 */
 Película::~Película(){}
@@ -40,14 +43,19 @@ void Película::setPrecio(double precioBase)
         }
     }
 }
-/*Le asigna al objeto programación los atributos horaInicio, minInicio, horaFin y minFin*/
-void Película::setProgramación(int horaInicio, int minInicio, int horaFin, int minFin)
+
+/*Le asigna un entero al atributo duraciónH*/
+void Película::setDuraciónH(int duraciónH)
 {
-    programación.setHoraInicio(horaInicio);
-    programación.setMinInicio(minInicio);
-    programación.setHoraFin(horaFin);
-    programación.setMinFin(minFin);
+    this->duraciónH=duraciónH;
 }
+
+/*Le asigna un entero al atributo duraciónM*/
+void Película::setDuraciónM(int duraciónM)
+{
+    this->duraciónM=duraciónM;
+}
+
 /*Devuelve un string que corresponde con el atributo nombre*/
 string Película::getNombre()
 {
@@ -58,8 +66,13 @@ string Película::getGénero()
 {
     return género;
 }
-/*Devuelve un objeto Programación que corresponde con el atributo programación*/
-Programación Película::getProgramación()
+/*Devuelve un entero que corresponde al atributo duraciónH*/
+int Película::getDuraciónH()
 {
-    return this-> programación;
+    return duraciónH;
+}
+/*Devuelve un entero que corresponde el atributo duraciónM*/
+int Película::getDuraciónM()
+{
+    return duraciónM;
 }

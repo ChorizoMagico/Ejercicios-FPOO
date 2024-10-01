@@ -4,7 +4,14 @@
 using namespace std;
 
 /*Constructor*/
-Programación::Programación(){}
+Programación::Programación()
+{
+    nombrePelícula="vacío";
+    horaFin=0;
+    minFin=0;
+    horaInicio=0;
+    minInicio=0;
+}
 /*Destructor*/
 Programación::~Programación(){}
 

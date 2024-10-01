@@ -9,7 +9,8 @@ class Película
         string nombre;
         string género;
         double precio;
-        Programación programación;
+        int duraciónH;
+        int duraciónM;
     
     public:
         Película();
@@ -17,10 +18,12 @@ class Película
         void setNombre(string);
         void setGénero(string);
         void setPrecio(double);
-        void setProgramación(int, int, int, int);
+        void setDuraciónH(int);
+        void setDuraciónM(int);
         string getNombre();
         string getGénero();
-        Programación getProgramación();
+        int getDuraciónH();
+        int getDuraciónM();
 };
 
 #else

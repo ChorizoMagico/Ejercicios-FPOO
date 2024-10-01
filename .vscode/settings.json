@@ -1,0 +1,5 @@
+{
+    "cmake.ignoreCMakeListsMissing": true,
+    "files.encoding": "utf8",
+    "files.autoGuessEncoding": true
+}

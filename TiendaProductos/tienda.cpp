@@ -1,37 +1,27 @@
 #include "Tienda.h"
 #include <iostream>
-
+#include "Validaciones.h"
 
 
 Tienda::Tienda(){}
 
 Tienda::~Tienda(){}
 
-string leer(string mensaje)
-{
-    string aux;
-    do{
-        cout<<mensaje;
-        getline(cin, aux);
-    }while(aux.empty());
-    return aux;
-}
-
 Producto& Tienda::getProducto(int índice)
 {
     return totalProductos[índice];
 }
 
-void Tienda::ingresarProducto()
+void Tienda::ingresarProducto(Validaciones& val)
 {
     string nombre, nombreM="";
     double precio;
     int stock, índice, marca;
     bool repetido=false;
-    índice=stoi(leer("\nDigite el número del producto a ingresar: "));
-    nombre=leer("\nDigite el nombre del producto: ");
-    precio=stod(leer("\nDigite el precio del producto: "));
-    stock=stoi(leer("\nDigite el stock del producto: "));
+    índice=stoi(val.leerI(1,"\nDigite (del 1 al 10) el número del producto a ingresar: ",10))-1;
+    nombre=val.leer("\nDigite el nombre del producto: ");
+    precio=stod(val.leerD(0,"\nDigite el precio del producto: "));
+    stock=stoi(val.leerI(0,"\nDigite el stock del producto: "));
     for(int i=0; i<nombre.length();i++)
     {
         nombreM+=tolower(nombre[i]);
@@ -46,7 +36,7 @@ void Tienda::ingresarProducto()
     }
     if(repetido==true)
     {
-        stock=stoi(leer("\nProducto ya existente. Solo puede actualizar su stock: "));
+        stock=stoi(val.leerI(0,"\nProducto ya existente. Solo puede actualizar su stock: "));
         getProducto(marca).setStock(stock);
     }
     else
@@ -71,10 +61,10 @@ string Tienda::mostrarProductos()
     return lista;
 }
 
-string Tienda::buscarPorNombre()
+string Tienda::buscarPorNombre(Validaciones& val)
 {
     string nombre, nombreM="", lista="";
-    nombre=leer("\nDigite el nombre del producto a buscar: ");
+    nombre=val.leer("\nDigite el nombre del producto a buscar: ");
     for(int i=0; i<nombre.length(); i++)
     {
         nombreM+=tolower(nombre[i]);
@@ -106,11 +96,11 @@ string Tienda::calcularStock()
     }
     return lista;
 }
-string Tienda::buscarPorRangoPrecios()
+string Tienda::buscarPorRangoPrecios(Validaciones& val)
 {
     double rangoInicio, rangoFinal;
-    rangoInicio=stod(leer("\nDigite el incio del rango de precios: "));
-    rangoFinal=stod(leer("\nDigite el final del rango de precios: "));
+    rangoInicio=stod(val.leerD(0,"\nDigite el inicio del rango de precios: "));
+    rangoFinal=stod(val.leerD(rangoInicio,"\nDigite el final del rango de precios: "));
     string lista="\n";
     for(int i=0; i<10; i++)
     {
@@ -121,11 +111,11 @@ string Tienda::buscarPorRangoPrecios()
     }
     return lista;
 }
-void Tienda::modificarPrecio()
+void Tienda::modificarPrecio(Validaciones& val)
 {
     string nombre, nombreM="";
     double precio;
-    nombre=leer("Digite el nombre del producto: ");
+    nombre=val.leer("Digite el nombre del producto: ");
     for(int i=0; i<nombre.length();i++)
     {
         nombreM+=tolower(nombre[i]);
@@ -135,7 +125,7 @@ void Tienda::modificarPrecio()
         if(getProducto(i).getNombre()==nombreM)
         {
             cout<<"El precio actual del producto "<<getProducto(i).getNombre()<<" es: "<<getProducto(i).getPrecio()<<endl;
-            precio=stod(leer("Digite el nuevo precio: "));
+            precio=stod(val.leerD(0,"Digite el nuevo precio: "));
             getProducto(i).setPrecio(precio);
             cout<<"\nPrecio ingresado con éxito!!"<<endl;
             break;

@@ -1,0 +1,28 @@
+# Ignorar carpetas de build en todos los proyectos
+**/build/
+**/*.o
+**/*.obj
+**/*.exe
+**/*.dll
+**/*.so
+**/*.dylib
+**/*.pdb
+**/*.log
+
+# Ignorar archivos de configuración de IDE en todos los proyectos
+**/.vscode/
+**/.idea/
+**/*.sln
+**/*.vcxproj
+**/*.user
+**/*.ncb
+**/*.suo
+**/*.cache
+**/*.cmake
+
+# Ignorar archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar cualquier carpeta llamada out en cualquier nivel
+**/out/

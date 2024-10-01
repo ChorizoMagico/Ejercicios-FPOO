@@ -1,7 +1,10 @@
 #include "Sala.h"
 /*
 Constructor*/
-Sala::Sala(){}
+Sala::Sala()
+{
+    nombre="Sin nombre";
+}
 /*
 Destructor*/
 Sala::~Sala(){}

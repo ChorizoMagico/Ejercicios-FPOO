@@ -2,6 +2,7 @@
 #define TIENDA_H
 #include "Producto.h"
 #include <string>
+#include "Validaciones.h"
 
 class Tienda
 {
@@ -10,14 +11,15 @@ class Tienda
 
     public:
         Tienda();
+        Tienda(Validaciones&);
         ~Tienda();
         Producto& getProducto(int);
-        void ingresarProducto();
+        void ingresarProducto(Validaciones&);
         string mostrarProductos();
-        string buscarPorNombre();
+        string buscarPorNombre(Validaciones&);
         string calcularStock();
-        string buscarPorRangoPrecios();
-        void modificarPrecio();
+        string buscarPorRangoPrecios(Validaciones&);
+        void modificarPrecio(Validaciones&);
 };
 
 #endif // TIENDA_H
