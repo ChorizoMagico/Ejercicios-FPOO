@@ -1,0 +1,32 @@
+[
+{
+  "directory": "G:/Documents/Code/CuentaBancaria/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -g -o CMakeFiles\\Ejercicio4.dir\\CuentaAhorros.cpp.obj -c G:\\Documents\\Code\\CuentaBancaria\\CuentaAhorros.cpp",
+  "file": "G:\\Documents\\Code\\CuentaBancaria\\CuentaAhorros.cpp",
+  "output": "CMakeFiles\\Ejercicio4.dir\\CuentaAhorros.cpp.obj"
+},
+{
+  "directory": "G:/Documents/Code/CuentaBancaria/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -g -o CMakeFiles\\Ejercicio4.dir\\CuentaBancaria.cpp.obj -c G:\\Documents\\Code\\CuentaBancaria\\CuentaBancaria.cpp",
+  "file": "G:\\Documents\\Code\\CuentaBancaria\\CuentaBancaria.cpp",
+  "output": "CMakeFiles\\Ejercicio4.dir\\CuentaBancaria.cpp.obj"
+},
+{
+  "directory": "G:/Documents/Code/CuentaBancaria/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -g -o CMakeFiles\\Ejercicio4.dir\\CuentaCorriente.cpp.obj -c G:\\Documents\\Code\\CuentaBancaria\\CuentaCorriente.cpp",
+  "file": "G:\\Documents\\Code\\CuentaBancaria\\CuentaCorriente.cpp",
+  "output": "CMakeFiles\\Ejercicio4.dir\\CuentaCorriente.cpp.obj"
+},
+{
+  "directory": "G:/Documents/Code/CuentaBancaria/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -g -o CMakeFiles\\Ejercicio4.dir\\main.cpp.obj -c G:\\Documents\\Code\\CuentaBancaria\\main.cpp",
+  "file": "G:\\Documents\\Code\\CuentaBancaria\\main.cpp",
+  "output": "CMakeFiles\\Ejercicio4.dir\\main.cpp.obj"
+},
+{
+  "directory": "G:/Documents/Code/CuentaBancaria/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -g -o CMakeFiles\\Ejercicio4.dir\\Validaciones.cpp.obj -c G:\\Documents\\Code\\CuentaBancaria\\Validaciones.cpp",
+  "file": "G:\\Documents\\Code\\CuentaBancaria\\Validaciones.cpp",
+  "output": "CMakeFiles\\Ejercicio4.dir\\Validaciones.cpp.obj"
+}
+]

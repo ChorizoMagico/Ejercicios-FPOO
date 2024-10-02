@@ -54,7 +54,7 @@ las cuales se comparan para verificar que no se crucen */
 void Cine::ingresarSala(Validaciones& val)
 {
     int númeroSala, horaInicio, minInicio, horaFin, minFin, númeroPelícula;
-    double horarioInicioActual, horarioFinal, horarioInicio;
+    double horarioInicioActual, horarioFinalActual, horarioFinal, horarioInicio;
     bool cruza = false;
     string nombreSala, nombreProgramación;
     númeroSala = stoi(val.leerI(1, "Digite el número de la sala, siendo 5 el máximo: ", 5));
@@ -88,6 +88,7 @@ void Cine::ingresarSala(Validaciones& val)
                 horarioFinal = horaInicio + minInicio / 60.0 + totalPelículas[númeroPelícula-1].getDuraciónH() + totalPelículas[númeroPelícula-1].getDuraciónM() / 60.0;
             } while (horarioFinal > 22.5);
             horarioInicioActual = horaInicio + minInicio / 60.0;
+            horarioFinalActual = horaFin+minFin/60.0;
             cruza = false; 
             for (int k = 0; k < 4; k++)
             {
@@ -95,7 +96,7 @@ void Cine::ingresarSala(Validaciones& val)
                 {
                     horarioFinal = totalSalas[númeroSala-1].getProgramación(k).getHoraFin() + totalSalas[númeroSala-1].getProgramación(k).getMinFin() / 60.0;
                     horarioInicio = totalSalas[númeroSala-1].getProgramación(k).getHoraInicio() + totalSalas[númeroSala-1].getProgramación(k).getMinInicio() / 60.0;
-                    if (horarioFinal > horarioInicioActual && horarioInicio < horarioInicioActual)
+                    if ((horarioFinal > horarioInicioActual and horarioInicio < horarioInicioActual) or (horarioFinalActual<horarioFinal and horarioFinalActual>horarioInicio) )
                     {
                         cruza = true;
                         break;
