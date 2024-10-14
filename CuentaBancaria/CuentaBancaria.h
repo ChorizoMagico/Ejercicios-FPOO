@@ -17,7 +17,7 @@ class CuentaBancaria
     public:
         CuentaBancaria();
         CuentaBancaria(double, double);
-        ~CuentaBancaria();
+        virtual ~CuentaBancaria();
         void consignar(double);
         void retirar(double);
         void calcIntMen(double);

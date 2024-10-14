@@ -1,9 +1,0 @@
-# ninja log v6
-4	561	7495294377905573	CMakeFiles/Ejercicio4.dir/CuentaAhorros.cpp.obj	2deecfbf4888f0f8
-10	572	7495294377926231	CMakeFiles/Ejercicio4.dir/CuentaBancaria.cpp.obj	aabe82335e27f0e4
-31	603	7495294378180508	CMakeFiles/Ejercicio4.dir/Validaciones.cpp.obj	97aa995bdd7e1d22
-9	465	7495294888144007	CMakeFiles/Ejercicio4.dir/CuentaCorriente.cpp.obj	deb8ca8ed0804026
-15	484	7495294888194351	CMakeFiles/Ejercicio4.dir/main.cpp.obj	96000f96a0e7be49
-485	726	7495294892890190	Ejercicio4.exe	625213f134f5d2b4
-9	473	7495295875732883	CMakeFiles/Ejercicio4.dir/main.cpp.obj	96000f96a0e7be49
-474	661	7495295880396549	Ejercicio4.exe	625213f134f5d2b4
