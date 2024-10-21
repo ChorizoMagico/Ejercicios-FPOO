@@ -1,0 +1,25 @@
+# ninja log v6
+10	440	7512528244546947	CMakeFiles/EjercicioJuegoLetras.dir/main.cpp.obj	a600b5f92a77730
+15	511	7512528244596813	CMakeFiles/EjercicioJuegoLetras.dir/UsaLetras.cpp.obj	ec3ef1a75f5a3daf
+21	518	7512528244622290	CMakeFiles/EjercicioJuegoLetras.dir/Validaciones.cpp.obj	9834e93556905879
+4	533	7512528244491807	CMakeFiles/EjercicioJuegoLetras.dir/Letras.cpp.obj	d2dbafa3b6fd5a28
+533	750	7512528249779340	EjercicioJuegoLetras.exe	47b510e1a17d4498
+16	451	7512532129127190	CMakeFiles/EjercicioJuegoLetras.dir/UsaLetras.cpp.obj	ec3ef1a75f5a3daf
+9	484	7512532129034286	CMakeFiles/EjercicioJuegoLetras.dir/Letras.cpp.obj	d2dbafa3b6fd5a28
+485	659	7512532133779503	EjercicioJuegoLetras.exe	47b510e1a17d4498
+10	485	7512535471068862	CMakeFiles/EjercicioJuegoLetras.dir/Letras.cpp.obj	d2dbafa3b6fd5a28
+485	661	7512535475809985	EjercicioJuegoLetras.exe	47b510e1a17d4498
+9	470	7512540438627357	CMakeFiles/EjercicioJuegoLetras.dir/Letras.cpp.obj	d2dbafa3b6fd5a28
+471	646	7512540443164700	EjercicioJuegoLetras.exe	47b510e1a17d4498
+9	515	7512542442468043	CMakeFiles/EjercicioJuegoLetras.dir/Letras.cpp.obj	d2dbafa3b6fd5a28
+515	694	7512542447447911	EjercicioJuegoLetras.exe	47b510e1a17d4498
+8	470	7512544492856916	CMakeFiles/EjercicioJuegoLetras.dir/Letras.cpp.obj	d2dbafa3b6fd5a28
+470	653	7512544497483601	EjercicioJuegoLetras.exe	47b510e1a17d4498
+9	476	7512546056716673	CMakeFiles/EjercicioJuegoLetras.dir/Letras.cpp.obj	d2dbafa3b6fd5a28
+476	657	7512546061322654	EjercicioJuegoLetras.exe	47b510e1a17d4498
+9	475	7512546835383737	CMakeFiles/EjercicioJuegoLetras.dir/Letras.cpp.obj	d2dbafa3b6fd5a28
+476	648	7512546840037742	EjercicioJuegoLetras.exe	47b510e1a17d4498
+8	501	7512547933824645	CMakeFiles/EjercicioJuegoLetras.dir/Letras.cpp.obj	d2dbafa3b6fd5a28
+9	219	7512548222739190	EjercicioJuegoLetras.exe	47b510e1a17d4498
+9	472	7512551592132551	CMakeFiles/EjercicioJuegoLetras.dir/Letras.cpp.obj	d2dbafa3b6fd5a28
+472	687	7512551596640463	EjercicioJuegoLetras.exe	47b510e1a17d4498

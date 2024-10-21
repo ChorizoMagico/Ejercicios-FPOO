@@ -1,0 +1,26 @@
+[
+{
+  "directory": "G:/Documents/Code/JuegoLetras/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -g -o CMakeFiles\\EjercicioJuegoLetras.dir\\Letras.cpp.obj -c G:\\Documents\\Code\\JuegoLetras\\Letras.cpp",
+  "file": "G:\\Documents\\Code\\JuegoLetras\\Letras.cpp",
+  "output": "CMakeFiles\\EjercicioJuegoLetras.dir\\Letras.cpp.obj"
+},
+{
+  "directory": "G:/Documents/Code/JuegoLetras/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -g -o CMakeFiles\\EjercicioJuegoLetras.dir\\main.cpp.obj -c G:\\Documents\\Code\\JuegoLetras\\main.cpp",
+  "file": "G:\\Documents\\Code\\JuegoLetras\\main.cpp",
+  "output": "CMakeFiles\\EjercicioJuegoLetras.dir\\main.cpp.obj"
+},
+{
+  "directory": "G:/Documents/Code/JuegoLetras/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -g -o CMakeFiles\\EjercicioJuegoLetras.dir\\UsaLetras.cpp.obj -c G:\\Documents\\Code\\JuegoLetras\\UsaLetras.cpp",
+  "file": "G:\\Documents\\Code\\JuegoLetras\\UsaLetras.cpp",
+  "output": "CMakeFiles\\EjercicioJuegoLetras.dir\\UsaLetras.cpp.obj"
+},
+{
+  "directory": "G:/Documents/Code/JuegoLetras/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -g -o CMakeFiles\\EjercicioJuegoLetras.dir\\Validaciones.cpp.obj -c G:\\Documents\\Code\\JuegoLetras\\Validaciones.cpp",
+  "file": "G:\\Documents\\Code\\JuegoLetras\\Validaciones.cpp",
+  "output": "CMakeFiles\\EjercicioJuegoLetras.dir\\Validaciones.cpp.obj"
+}
+]
