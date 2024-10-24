@@ -15,7 +15,7 @@ class Personaje
         Personaje();
         Personaje(int, int);
         virtual ~Personaje();
-        void atacar(Personaje&);
+        void atacar(Personaje*&);
         int getVida();
         virtual string getEstado();
         virtual void setVida(int);

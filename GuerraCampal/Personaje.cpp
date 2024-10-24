@@ -15,9 +15,9 @@ Personaje::Personaje(int vida, int daño)
 
 Personaje::~Personaje(){}
 
-void Personaje::atacar(Personaje& enemigo)
+void Personaje::atacar(Personaje*& enemigo)
 {
-    enemigo.setVida(enemigo.getVida()-daño);
+    enemigo->setVida(enemigo->getVida()-daño);
 }
 
 int Personaje::getVida()

@@ -12,6 +12,8 @@ class Batalla
         Batalla();
         ~Batalla();
         void turno(Validaciones);
+        void cerrar();
+        void estadoActual();
 };
 
 #else

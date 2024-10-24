@@ -1,3 +1,0 @@
-G:/Documents/Code/JuegoLetras/build/CMakeFiles/EjercicioJuegoLetras.dir
-G:/Documents/Code/JuegoLetras/build/CMakeFiles/edit_cache.dir
-G:/Documents/Code/JuegoLetras/build/CMakeFiles/rebuild_cache.dir
