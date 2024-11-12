@@ -76,23 +76,25 @@ string Validaciones::leerD(double menor, string mensaje, double mayor)
 }
 
 /*
-Método que devuelve true si la cadena evaluada está compuesta por dígitos*/
+Método que devuelve true si la cadena evaluada es un entero*/
 bool Validaciones::validarEntero(string númeroS)
 {
-    int signo=0;
-    for(int i=0; i<númeroS.length();i++)
+    try
     {
-        if(númeroS[i]=='-')
-        {
-            signo++;
-        }
-        if(isdigit(númeroS[i])==false and signo!=1)
-        {
-            cout<<"El dato ingresado "<<númeroS<<" no es un número entero"<<endl;
-            return false;
-        }
+        stoi(númeroS);
+    }
+    catch(const invalid_argument& error)
+    {
+        cout<<"El dato ingresado "<<númeroS<<" no es un número entero. Error: "<<error.what()<<endl;
+        return false;
+    }
+    catch(const out_of_range& error)
+    {
+        cout<<"El dato ingresado "<<númeroS<<" es demasiado grande para ser un entero. Error: "<<error.what()<<endl;
+        return false;
     }
     return true;
+
 }
 /*
 Método que devuelve true si la primera cadena es menor que la segunda y ambos son enteros*/
@@ -132,25 +134,22 @@ bool Validaciones::validarEntero(int menor, string númeroS, int mayor)
     return false;
     
 }
-/*Método que devuelve true si la cadena evaluada está compuesta por dígitos y tiene solo un punto, es decir, es un número real*/
+/*Método que devuelve true si la cadena evaluada es un número real*/
 bool Validaciones::validarDouble(string númeroS)
 {
-    int punto=0, signo=0;
-    for(int i=0; i<númeroS.length();i++)
+    try
     {
-        if(númeroS[i]=='.')
-        {
-            punto++;
-        }
-        if(númeroS[i]=='-')
-        {
-            signo++;
-        }
-        if(isdigit(númeroS[i])==false and punto!=1 and signo!=1)
-        {
-            cout<<"El dato ingresado "<<númeroS<<" no es un número double"<<endl;
-            return false;
-        }
+        stod(númeroS);
+    }
+    catch(const invalid_argument& error)
+    {
+        cout<<"El dato ingresado "<<númeroS<<" no es un número real (double). Error: "<<error.what()<<endl;
+        return false;
+    }
+    catch(const out_of_range& error)
+    {
+        cout<<"El dato ingresado "<<númeroS<<" es demasiado grande para ser un real (double). Error: "<<error.what()<<endl;
+        return false;
     }
     return true;
 }
@@ -170,6 +169,7 @@ bool Validaciones::validarDouble(double menor, string númeroS)
         return true;
     }
     cout<<númeroS<<" no es mayor o igual que "<<menor<<endl;
+    return false;
 }
 /*Método que devuelve true si la cadena del medio es mayor que la primera y menor que la tercera, siendo las tres reales*/
 bool Validaciones::validarDouble(double menor, string númeroS, double mayor)
