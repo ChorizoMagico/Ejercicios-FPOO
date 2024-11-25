@@ -1,8 +1,8 @@
-#ifndef PROGRAMACIÓN_H
-#define PROGRAMACIÓN_H
+#ifndef PROGRAMACION_H
+#define PROGRAMACION_H
 #include <string>
 using namespace std;
-class Programación
+class Programacion
 {
     private:
         string nombrePelícula;
@@ -12,8 +12,8 @@ class Programación
         int minFin;
 
     public:
-        Programación();
-        ~Programación();
+        Programacion();
+        ~Programacion();
         int getHoraInicio();
         int getMinInicio();
         int getHoraFin();
@@ -27,6 +27,6 @@ class Programación
 };
 
 #else
-class Programación;
+class Programacion;
 
 #endif

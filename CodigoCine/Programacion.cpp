@@ -1,10 +1,10 @@
-#include "Programación.h"
+#include "Programacion.h"
 #include <iostream>
 #include <string>
 using namespace std;
 
 /*Constructor*/
-Programación::Programación()
+Programacion::Programacion()
 {
     nombrePelícula="vacío";
     horaFin=0;
@@ -13,55 +13,55 @@ Programación::Programación()
     minInicio=0;
 }
 /*Destructor*/
-Programación::~Programación(){}
+Programacion::~Programacion(){}
 
 /*Devuelve el atributo horaInicio*/
-int Programación::getHoraInicio()
+int Programacion::getHoraInicio()
 {
     return horaInicio;
 }
 /*Devuelve el atributo minInicio*/
-int Programación::getMinInicio()
+int Programacion::getMinInicio()
 {
     return minInicio;
 }
 /*Devuelve el atributo horaFin*/
-int Programación::getHoraFin()
+int Programacion::getHoraFin()
 {
     return horaFin;
 }
 /*Devuelve el atributo minFin*/
-int Programación::getMinFin()
+int Programacion::getMinFin()
 {
     return minFin;
 }
 /*Le asigna un string al atributo nombrePelícula*/
-void Programación::setNombre(string nombre)
+void Programacion::setNombre(string nombre)
 {
     nombrePelícula=nombre;
 }
 /*Asigna un entero al atributo horaInicio*/
-void Programación::setHoraInicio(int horaInicio)
+void Programacion::setHoraInicio(int horaInicio)
 {
     this->horaInicio=horaInicio;
 }
 /*Asigna un entero al atributo minInicio*/
-void Programación::setMinInicio(int minInicio)
+void Programacion::setMinInicio(int minInicio)
 {
     this->minInicio=minInicio;
 }
 /*Asigna un entero al atributo horaFin*/
-void Programación::setHoraFin(int horaFin)
+void Programacion::setHoraFin(int horaFin)
 {
     this->horaFin=horaFin;
 }
 /*Asigna un entero al atributo minFin*/
-void Programación::setMinFin(int minFin)
+void Programacion::setMinFin(int minFin)
 {
     this->minFin=minFin;
 }
 /*Devuelve el atributo nombrePelícula*/
-string Programación::getNombre()
+string Programacion::getNombre()
 {
     return nombrePelícula;
 }

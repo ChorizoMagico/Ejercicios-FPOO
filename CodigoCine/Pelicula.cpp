@@ -1,29 +1,29 @@
-#include "Película.h"
+#include "Pelicula.h"
 
 /*
 Constructor*/
-Película::Película()
+Pelicula::Pelicula()
 {
     nombre="";
 }
 /*Destructor
 */
-Película::~Película(){}
+Pelicula::~Pelicula(){}
 
 /*Asigna un string al atributo nombre del objeto película*/
-void Película::setNombre(string nombre)
+void Pelicula::setNombre(string nombre)
 {
     this->nombre=nombre;
 }
 
 /*Asigna un string al atributo género del objeto película*/
-void Película::setGénero(string género)
+void Pelicula::setGénero(string género)
 {
     this->género=género;
 }
 
 /*En base al atributo género y a la variable global precioBase, asigna un double al atributo precio*/
-void Película::setPrecio(double precioBase)
+void Pelicula::setPrecio(double precioBase)
 {
     if(género=="comedia" or género=="drama")
         precio=precioBase+precioBase*0.1;
@@ -45,34 +45,34 @@ void Película::setPrecio(double precioBase)
 }
 
 /*Le asigna un entero al atributo duraciónH*/
-void Película::setDuraciónH(int duraciónH)
+void Pelicula::setDuraciónH(int duraciónH)
 {
     this->duraciónH=duraciónH;
 }
 
 /*Le asigna un entero al atributo duraciónM*/
-void Película::setDuraciónM(int duraciónM)
+void Pelicula::setDuraciónM(int duraciónM)
 {
     this->duraciónM=duraciónM;
 }
 
 /*Devuelve un string que corresponde con el atributo nombre*/
-string Película::getNombre()
+string Pelicula::getNombre()
 {
     return nombre;
 }
 /*Devuelve un string que corresponde con el atributo género*/
-string Película::getGénero()
+string Pelicula::getGénero()
 {
     return género;
 }
 /*Devuelve un entero que corresponde al atributo duraciónH*/
-int Película::getDuraciónH()
+int Pelicula::getDuraciónH()
 {
     return duraciónH;
 }
 /*Devuelve un entero que corresponde el atributo duraciónM*/
-int Película::getDuraciónM()
+int Pelicula::getDuraciónM()
 {
     return duraciónM;
 }

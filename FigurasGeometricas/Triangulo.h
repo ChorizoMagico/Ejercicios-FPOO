@@ -1,17 +1,17 @@
-#ifndef TRIÁNGULO_H
-#define TRIÁNGULO_H
+#ifndef TRIANGULO_H
+#define TRIANGULO_H
 #include "Figura.h"
 
-class Triángulo: public Figura
+class Triangulo: public Figura
 {
     private:
         double base, altura, lado1, lado2, lado3;
         string tipo;
     
     public:
-        Triángulo();
-        Triángulo(string, string, double, double, double, double, double);
-        ~Triángulo();
+        Triangulo();
+        Triangulo(string, string, double, double, double, double, double);
+        ~Triangulo();
         double calcularÁrea();
         double calcularPerímetro();
         string mostrarAtributos();
@@ -19,5 +19,5 @@ class Triángulo: public Figura
 };
 
 #else
-class Triángulo;
+class Triangulo;
 #endif

@@ -1,6 +1,6 @@
-#include "Triángulo.h"
+#include "Triangulo.h"
 //constructor vacío
-Triángulo::Triángulo(): Figura()
+Triangulo::Triangulo(): Figura()
 {
     lado1=0;
     lado2=0;
@@ -10,7 +10,7 @@ Triángulo::Triángulo(): Figura()
     tipo="";
 }
 //constructor
-Triángulo::Triángulo(string color, string tipo, double altura, double base, double lado1, double lado2, double lado3): Figura(color)
+Triangulo::Triangulo(string color, string tipo, double altura, double base, double lado1, double lado2, double lado3): Figura(color)
 {
     this->lado1=lado1;
     this->lado2=lado2;
@@ -20,23 +20,23 @@ Triángulo::Triángulo(string color, string tipo, double altura, double base, do
     this->base=altura;
 }
 //destructor
-Triángulo::~Triángulo(){}
+Triangulo::~Triangulo(){}
 
-double Triángulo::calcularÁrea()
+double Triangulo::calcularÁrea()
 {
     double área=0;
     área=base*altura;
     return área;
 }
 
-double Triángulo::calcularPerímetro()
+double Triangulo::calcularPerímetro()
 {
     double per=0;
     per=lado1+lado2+lado3;
     return per;
 }
 
-string Triángulo::mostrarAtributos()
+string Triangulo::mostrarAtributos()
 {
     string lista="";
     lista="Color: " + color + " Base: " + to_string(base) + " Altura: "  +to_string(altura) + "\n" +

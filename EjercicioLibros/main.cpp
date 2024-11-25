@@ -1,7 +1,7 @@
-#include "AplicaciónUso.h"
+#include "AplicacionUso.h"
 
 int main()
 {
-    AplicaciónUso miAplicación = AplicaciónUso();
-    miAplicación.menú();
+    AplicacionUso miAplicacion = AplicacionUso();
+    miAplicacion.menú();
 }

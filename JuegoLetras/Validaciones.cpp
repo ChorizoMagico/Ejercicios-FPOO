@@ -104,7 +104,7 @@ bool Validaciones::validarEntero(int menor, string númeroS)
     if(validarEntero(númeroS)==false)
     {
         return false;
-    };
+    }
 
     número=stoi(númeroS);
 
@@ -122,7 +122,7 @@ bool Validaciones::validarEntero(int menor, string númeroS, int mayor)
     if(validarEntero(númeroS)==false)
     {
         return false;
-    };
+    }
 
     número=stoi(númeroS);
 
@@ -160,7 +160,7 @@ bool Validaciones::validarDouble(double menor, string númeroS)
     if(validarDouble(númeroS)==false)
     {
         return false;
-    };
+    }
 
     número=stod(númeroS);
     

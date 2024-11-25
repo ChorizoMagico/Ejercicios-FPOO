@@ -1,31 +1,31 @@
-#include "Círculo.h"
-Círculo::Círculo(): Figura()
+#include "Circulo.h"
+Circulo::Circulo(): Figura()
 {
     radio=0;
 }
 
-Círculo::Círculo(string color, double radio): Figura(color)
+Circulo::Circulo(string color, double radio): Figura(color)
 {
     this->radio=radio;
 }
 
-Círculo::~Círculo(){}
+Circulo::~Circulo(){}
 
-double Círculo::calcularÁrea()
+double Circulo::calcularÁrea()
 {
     double área=0;
     área=M_PI*pow(radio,2);
     return área;
 }
 
-double Círculo::calcularPerímetro()
+double Circulo::calcularPerímetro()
 {
     double per=0;
     per=2*M_PI*radio;
     return per;
 }
 
-string Círculo::mostrarAtributos()
+string Circulo::mostrarAtributos()
 {
     string atributos="";
     atributos+=color+" "+to_string(radio)+" \nÁrea: "+to_string(calcularÁrea())+ " Perímetro: "+to_string(calcularPerímetro())+"\n";

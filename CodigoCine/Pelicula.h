@@ -1,9 +1,9 @@
-#ifndef PELÍCULA_H
-#define PELÍCULA_H
+#ifndef PELICULA_H
+#define PELICULA_H
 #include <string>
-#include "Programación.h"
+#include "Programacion.h"
 using namespace std;
-class Película
+class Pelicula
 {
     private:
         string nombre;
@@ -13,8 +13,8 @@ class Película
         int duraciónM;
     
     public:
-        Película();
-        ~Película();
+        Pelicula();
+        ~Pelicula();
         void setNombre(string);
         void setGénero(string);
         void setPrecio(double);
@@ -27,5 +27,5 @@ class Película
 };
 
 #else
-class Película;
+class Pelicula;
 #endif

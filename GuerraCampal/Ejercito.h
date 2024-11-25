@@ -1,20 +1,20 @@
-#ifndef EJÉRCITO_H
-#define EJÉRCITO_H
+#ifndef EJERCITO_H
+#define EJERCITO_H
 #include "Personaje.h"
 #include "Arqueros.h"
 #include "Arquerosplus.h"
 #include "Draconaurius.h"
 #include "Draconauriusplus.h"
 
-class Ejército
+class Ejercito
 {
     private:
         Personaje* soldados[7];
         int finados;
     
     public:
-        Ejército();
-        ~Ejército();
+        Ejercito();
+        ~Ejercito();
         void setFinados();
         int getFinados();
         Personaje*& getSold(int);
@@ -22,5 +22,5 @@ class Ejército
 };
 
 #else
-class Ejército;
+class Ejercito;
 #endif

@@ -1,9 +1,9 @@
-#ifndef APLICACIÓNUSO_H
-#define APLICACIÓNUSO_H
+#ifndef APLICACIONUSO_H
+#define APLICACIONUSO_H
 #include "Persona.h"
 #include "Validaciones.h"
 
-class AplicaciónUso
+class AplicacionUso
 {
     private:
         Libro* libros;
@@ -12,8 +12,8 @@ class AplicaciónUso
         int cantidadP;
 
     public:
-        AplicaciónUso();
-        ~AplicaciónUso();
+        AplicacionUso();
+        ~AplicacionUso();
         void crearArregloL(Validaciones&);
         void crearArregloP(Validaciones&);
         void mostrarPersonas(int);
@@ -23,5 +23,5 @@ class AplicaciónUso
 };
 
 #else
-class AplicaciónUso;
+class AplicacionUso;
 #endif

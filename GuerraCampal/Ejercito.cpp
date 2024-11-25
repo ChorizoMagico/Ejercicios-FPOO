@@ -1,6 +1,6 @@
-#include "Ejército.h"
+#include "Ejercito.h"
 
-Ejército::Ejército()
+Ejercito::Ejercito()
 {
     finados=0;
     for(int i=0; i<7; i++)
@@ -9,19 +9,19 @@ Ejército::Ejército()
     }
        
 }
-Ejército::~Ejército(){}
+Ejercito::~Ejercito(){}
 
-void Ejército::setFinados()
+void Ejercito::setFinados()
 {
     finados++;
 }
 
-Personaje*& Ejército::getSold(int índice)
+Personaje*& Ejercito::getSold(int índice)
 {
     return soldados[índice];
 }
 
-int Ejército::getFinados()
+int Ejercito::getFinados()
 {
     return finados;
 }

@@ -1,17 +1,17 @@
-#ifndef RECTÁNGULO_H
-#define RECTÁNGULO_H
+#ifndef RECTANGULO_H
+#define RECTANGULO_H
 #include "Figura.h"
 
-class Rectángulo: public Figura
+class Rectangulo: public Figura
 {
     private:
         double base;
         double altura;
     
     public:
-        Rectángulo();
-        Rectángulo(string, double, double);
-        ~Rectángulo();
+        Rectangulo();
+        Rectangulo(string, double, double);
+        ~Rectangulo();
         double calcularÁrea();
         double calcularPerímetro();
         string mostrarAtributos();
@@ -19,5 +19,5 @@ class Rectángulo: public Figura
 };
 
 #else
-class Rectángulo;
+class Rectangulo;
 #endif

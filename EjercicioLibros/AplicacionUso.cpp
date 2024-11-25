@@ -1,7 +1,7 @@
-#include "AplicaciónUso.h"
+#include "AplicacionUso.h"
 #include "Validaciones.h"
 
-AplicaciónUso::AplicaciónUso()
+AplicacionUso::AplicacionUso()
 {
     libros=nullptr;
     personas=nullptr;
@@ -9,7 +9,7 @@ AplicaciónUso::AplicaciónUso()
     cantidadP=0;
 }
 
-void AplicaciónUso::crearArregloL(Validaciones& val)
+void AplicacionUso::crearArregloL(Validaciones& val)
 {
     int tamaño;
     tamaño=stoi(val.leerI(0,"¿Cuántos libros desea crear? "));
@@ -27,7 +27,7 @@ void AplicaciónUso::crearArregloL(Validaciones& val)
 
 }
 
-void AplicaciónUso::crearArregloP(Validaciones& val)
+void AplicacionUso::crearArregloP(Validaciones& val)
 {
     int tamaño;
     tamaño=stoi(val.leerI(0,"¿Cuántas personas desea crear? "));
@@ -44,7 +44,7 @@ void AplicaciónUso::crearArregloP(Validaciones& val)
 
 }
 
-void AplicaciónUso::menú()
+void AplicacionUso::menú()
 {
     int opc=0, contadorP=0, contadorL=0, páginas, índice, índice2, índice3;
     Libro* libro=nullptr;
@@ -155,7 +155,7 @@ void AplicaciónUso::menú()
     
 }
 
-void AplicaciónUso::mostrarPersonas(int índice)
+void AplicacionUso::mostrarPersonas(int índice)
 {
     for(int i=0; i<índice; i++)
     {
@@ -171,7 +171,7 @@ void AplicaciónUso::mostrarPersonas(int índice)
     }
 }
 
-void AplicaciónUso::mostrarLibros(int índice)
+void AplicacionUso::mostrarLibros(int índice)
 {
     for(int i=0; i<índice; i++)
     {
@@ -180,4 +180,4 @@ void AplicaciónUso::mostrarLibros(int índice)
     }
 }
 
-AplicaciónUso::~AplicaciónUso(){}
+AplicacionUso::~AplicacionUso(){}
